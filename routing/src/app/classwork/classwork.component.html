@@ -1,0 +1,17 @@
+<p>classwork works!</p>
+<form id="classwork">
+    <label>
+        mathsMarks
+    </label>
+    <input type="text" id="maths" name="maths" [(ngModel)]="maths" (change)="markValidation(maths)"><br><br>
+    <label>
+        scienceMarks
+    </label>
+    <input type="text" id="science" name="science" [(ngModel)]="science" (change)="markValidation1(science)"><br><br>
+    <label>
+        englishMarks
+    </label>
+    <input type="text" id="english" name="english" [(ngModel)]="english" (change)="markValidation2(english)"><br><br>
+    submit:<input type="submit" (click)="navigate()" value="submit" >
+    
+</form>

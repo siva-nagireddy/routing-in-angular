@@ -1,0 +1,76 @@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="p-3 mb-2 " > 
+    <div class="container">
+      <form class="row g-3  "  #signupForm="ngForm" id="top"  >
+        <h1 style="font-weight: 500%;">Form Details</h1>
+      <div class="col-md-12">
+        <label for="inputEmail4" class="form-label"  > <b>Email:</b></label>
+        <input style="width: 50%;" type="email" class="form-control" [(ngModel)]="Email" name="email" pattern="[a-z0-9]+@[a-z.]*" #emailValidation ="ngModel" id="inputEmail4" placeholder="Enter Valid Email" required>
+        <div *ngIf="emailValidation.touched &&emailValidation.invalid" style="color:red;">Enter Valid Email</div>
+      </div>
+  
+      <div class="col-md-12 ">
+        <label for="inputPassword4" class="form-label"><b>Password:</b></label>
+        <input style="width: 50%;" type="password" class="form-control" id="inputPassword4" name="password" [(ngModel)]="Password"  #paswordValidation="ngModel" placeholder="Enter Password" required>
+        <div *ngIf="paswordValidation.touched &&paswordValidation.invalid" style="color:red;">Enter Valid Password</div>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label"> <b>Present Address: </b></label>
+        <input style="width: 50%;" type="text" class="form-control"  #addressValidation="ngModel" name="PresentAddress" [(ngModel)]="PresentAddress" placeholder="Enter Present Address "  id="inputaddress1" required="">
+        <div *ngIf="addressValidation.touched &&addressValidation.invalid" style="color:red;">Enter Valid Address</div>
+          </div>
+     
+     
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label"> <b>Permanent Address: </b></label>
+        <input style="width: 50%;" type="text" class="form-control" id="inputAddress2" [(ngModel)]="PermanentAddress" name="PermanentAddress" #PermanentaddressValidation="ngModel" placeholder="Enter Permanent Address" required>
+        <div *ngIf="PermanentaddressValidation.touched &&PermanentaddressValidation.invalid" style="color:red;">Enter Valid Address</div>
+        </div>
+      
+      
+      <div class="col-md-12">
+        <label for="inputCity" class="form-label"><b>City:</b></label>
+        <input style="width: 50%;" type="text"  class="form-control" id="inputCity" name="City"  [(ngModel)]="City"  placeholder="City" #CityValidation="ngModel" required>
+        <div *ngIf="CityValidation.touched &&CityValidation.invalid" style="color:red;">Enter Valid Address</div>
+      </div>
+  
+  
+      <div class="col-md-12">
+        <label for="inputState" class="form-label"><b>State:</b> </label>
+        <select style="width: 50%;" id="inputState" class="form-select"  [(ngModel)]="State" name="State"  #stateValidation="ngModel" required >
+          <option  selected> Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Goa">Goa</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+        </select>
+        <div *ngIf="stateValidation.touched &&stateValidation.invalid" style="color:red;"><b>Select State</b> </div>
+      </div>
+      <div class="col-md-12">
+        <label for="inputZip" class="form-label"><b>Pin Code:</b></label>
+        <input style="width: 50%;" type="number" class="form-control" id="inputZip" name="pincode"placeholder="Pincode" [(ngModel)]="Pincode"  #pinValidation="ngModel" required>
+        <div *ngIf="pinValidation.touched &&pinValidation.invalid" style="color:red;">Enter Pincode</div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" [(ngModel)]="checkbox" #checkValidation="ngModel"  required >
+        
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+          <div *ngIf="checkValidation.touched &&checkValidation.invalid" style="color:red;"> Please Tick
+          </div>
+          
+        </div>
+      </div>
+    </form>
+    <div class="col-12">
+     
+     
+
+          <button type="button"  (click)= "Onsubmit(); navigate(); signupForm.reset()" class="btn btn-primary" *ngIf="signupForm.valid" >Sign in</button>
+      </div>
+    </div>
+  </div>

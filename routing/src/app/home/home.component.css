@@ -1,0 +1,35 @@
+input{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#inputEmail4{
+    margin-left: 300px;
+}
+#inputPassword4{
+    margin-left: 275px;
+}
+#inputaddress1{
+    margin-left: 230px;
+}
+#inputAddress2{
+    margin-left: 210px;
+}
+#inputCity{
+    margin-left: 310px;
+}
+#inputState{
+    margin-left: 300px;
+}
+#inputZip{
+    margin-left: 280px;
+}
+#gridCheck{
+    margin-right:1000px
+}
+form{
+    border-bottom: 2px solid black;
+}
